@@ -88,6 +88,8 @@
   (setq read-extended-command-predicate #'command-completion-default-include-p)
   ;; Disable Ispell completion function. As an alternative try `cape-dict'.
   (setq tab-always-indent 'complete)
+  ;; Enable the documentation popup
+  (corfu-popupinfo-mode)
 
   (global-corfu-mode 1))
 
