@@ -37,7 +37,7 @@
   ;; the mode `compile-angel-on-load-mode' was activated.
   (compile-angel-on-load-mode 1))
 
-(require 'my-config)
 (require 'my-dired)
 (require 'my-packages)
 (require 'my-modes)
+(require 'my-config)
