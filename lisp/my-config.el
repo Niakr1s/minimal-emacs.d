@@ -11,6 +11,9 @@
 (set-face-attribute 'default nil
                     :height 120 :weight 'normal :family "Iosevka NFM")
 
+;; --- Input method ---
+(setq default-input-method "russian-computer")
+
 ;; Set the fringes to match the pixel height of a character. This ensures the
 ;; fringe is wide enough, scaling dynamically with the current font size.
 (fringe-mode (frame-char-width))
