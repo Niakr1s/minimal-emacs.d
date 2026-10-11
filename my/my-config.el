@@ -127,4 +127,7 @@
 ;; Can switch between windows by Shift+arrow
 ;; (windmove-default-keybindings)
 
+;; Org-mode
+(setq org-agenda-files '("~/org"))
+
 (provide 'my-config)
