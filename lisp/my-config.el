@@ -124,4 +124,7 @@
 ;; Trigger an auto-save 30 seconds of idle time.
 (setq auto-save-timeout 30)
 
+;; Can switch between windows by Shift+arrow
+(windmove-default-keybindings)
+
 (provide 'my-config)
