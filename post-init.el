@@ -1,6 +1,6 @@
 ;;; -*- no-byte-compile: t; lexical-binding: t; -*-
 
-(add-to-list 'load-path (expand-file-name "lisp" minimal-emacs-user-directory))
+(add-to-list 'load-path (expand-file-name "my" minimal-emacs-user-directory))
 
 ;; Native compilation enhances Emacs performance by converting Elisp code into
 ;; native machine code, resulting in faster execution and improved
