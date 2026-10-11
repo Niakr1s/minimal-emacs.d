@@ -125,6 +125,6 @@
 (setq auto-save-timeout 30)
 
 ;; Can switch between windows by Shift+arrow
-(windmove-default-keybindings)
+;; (windmove-default-keybindings)
 
 (provide 'my-config)
