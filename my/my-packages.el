@@ -89,9 +89,9 @@
   ;; Disable Ispell completion function. As an alternative try `cape-dict'.
   (setq tab-always-indent 'complete)
   ;; Enable the documentation popup
-  (corfu-popupinfo-mode)
-
-  (global-corfu-mode 1))
+  (corfu-popupinfo-mode 1)
+  (global-corfu-mode 1)
+  (setq corfu-popupinfo-delay '(0.1 . 0.05)))
 
 ;; Cape, or Completion At Point Extensions, extends the capabilities of
 ;; in-buffer completion. It integrates with Corfu or the default completion UI,
