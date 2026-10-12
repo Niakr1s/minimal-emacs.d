@@ -119,5 +119,8 @@
 
 ;; Org-mode
 (setq org-agenda-files '("~/org"))
+;; Make it available at startup too, if you like
+(add-hook 'emacs-startup-hook (lambda () (org-agenda nil "n")))
+
 
 (provide 'my-config)
