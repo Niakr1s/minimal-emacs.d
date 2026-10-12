@@ -835,7 +835,8 @@
   :bind-keymap ("M-'" . surround-keymap))
 
 ;; Turn off eldoc-mode from appearing in a echo area, we will call it on-demand instead
-(require 'eldoc-box)
+(use-package  eldoc-box)
+
 (add-hook
  'eglot-managed-mode-hook
  (lambda ()
