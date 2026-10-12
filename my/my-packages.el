@@ -7,15 +7,6 @@
   :init
   (electric-pair-mode 1))
 
-(use-package which-key
-  :ensure nil
-  :init
-  (setq which-key-idle-delay 1.5)
-  (setq which-key-idle-secondary-delay 0.25)
-  (setq which-key-add-column-padding 1)
-  (setq which-key-max-description-length 40)
-  (which-key-mode 1))
-
 ;; Auto-revert in Emacs is a feature that automatically updates the
 ;; contents of a buffer to reflect changes made to the underlying file
 ;; on disk.

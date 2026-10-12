@@ -128,4 +128,6 @@
 (global-set-key (kbd "C-x p S") #'project-remember-project)
 (global-set-key (kbd "C-x p D") #'project-forget-project)
 
+(which-key-mode 1)
+
 (provide 'my-config)
