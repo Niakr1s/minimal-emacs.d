@@ -658,4 +658,7 @@
 (use-package mood-line
   :config (mood-line-mode))
 
+(use-package transpose-frame
+  :bind ("C-c t" . transpose-frame))
+
 (provide 'my-packages)
