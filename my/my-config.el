@@ -122,5 +122,7 @@
 ;; Make it available at startup too, if you like
 (add-hook 'emacs-startup-hook (lambda () (org-agenda nil "n")))
 
+;; Bind ibuffer
+(global-set-key (kbd "C-x C-b") #'ibuffer)
 
 (provide 'my-config)
