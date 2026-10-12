@@ -824,4 +824,23 @@
   :ensure t
   :bind-keymap ("M-'" . surround-keymap))
 
+;; Turn off eldoc-mode from appearing in a echo area, we will call it on-demand instead
+(require 'eldoc-box)
+(add-hook
+ 'eglot-managed-mode-hook
+ (lambda ()
+   ;; we want eglot to setup callbacks from eldoc, but we don't want eldoc
+   ;; running after every command. As a workaround, we disable it after we just
+   ;; enabled it. Now calling `M-x eldoc` will put the help we want in the eldoc
+   ;; buffer. Alternatively we could tell eglot to stay out of eldoc, and add
+   ;; the hooks manually, but that seems fragile to updates in eglot.
+   (eldoc-mode -1)))
+
+;; eldoc show on demand block
+(defun my-eldoc-show ()
+  (interactive)
+  (eldoc nil) ;; nil to not bring the eldoc buffer to view
+  (eldoc-box-help-at-point) )
+(global-set-key (kbd "C-h D") #'my-eldoc-show)
+
 (provide 'my-config)
