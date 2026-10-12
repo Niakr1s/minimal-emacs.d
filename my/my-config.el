@@ -130,6 +130,20 @@
 
 (which-key-mode 1)
 
+(global-completion-preview-mode 1)
+
+;; Auto-Chmod Scripts on Save
+(add-hook 'after-save-hook
+          #'executable-make-buffer-file-executable-if-script-p)
+
+;; Example: C-x o o o – keep cycling windows
+(repeat-mode 1)
+
+;; With this setting, after the first C-u C-SPC you can keep pressing just C-SPC to continue popping
+(setq set-mark-command-repeat-pop t)
+
+(setq help-window-select t)
+
 ;; --- PACKAGES ---
 
 ;;; Enable automatic insertion and management of matching pairs of characters
