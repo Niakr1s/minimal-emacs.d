@@ -340,9 +340,11 @@
 ;; Apheleia is an Emacs package designed to run code formatters (e.g., Shfmt,
 ;; Black and Prettier) asynchronously without disrupting the cursor position.
 (use-package apheleia
-  :commands (apheleia-mode
+  :commands (
+             ;; apheleia-mode
              apheleia-global-mode)
-  :hook ((prog-mode . apheleia-mode)))
+  ;; :hook ((prog-mode . apheleia-mode))
+  )
 
 (use-package dumb-jump
   :commands dumb-jump-xref-activate
