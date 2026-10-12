@@ -661,4 +661,40 @@
 (use-package transpose-frame
   :bind ("C-c t" . transpose-frame))
 
+(use-package chezmoi
+  :bind
+  ("C-c C f" . chezmoi-find)
+  ("C-c C s" . chezmoi-write))
+
+(use-package gptel
+  :ensure t
+  :config
+
+  ;; Don't need this actually
+  ;; (add-hook 'gptel-post-stream-hook 'gptel-auto-scroll)
+  ;; (add-hook 'gptel-post-response-functions 'gptel-end-of-response)
+
+  (setq gptel-models
+        '(
+          "Qwen3.8-27B"
+          "Qwen3.6-35B-A3B"
+          "Gemma4-26B-A4B"
+          "Gemma4-E4B"
+          ))
+
+  (setq gptel-model 'Qwen3.6-35B-A3B)
+  (setq gptel-backend
+        (gptel-make-openai "llama.cpp"
+                           :host "localhost:9931"
+                           :endpoint "/v1/chat/completions"
+                           :protocol "http"
+                           :stream t
+                           :key "sk-no-key-required"
+                           :models gptel-models
+                           ))
+  )
+
+(use-package gptel-agent
+  :config (gptel-agent-update))         ;Read files from agents directories
+
 (provide 'my-packages)
