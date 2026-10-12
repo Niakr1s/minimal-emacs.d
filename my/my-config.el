@@ -852,6 +852,6 @@
   (interactive)
   (eldoc nil) ;; nil to not bring the eldoc buffer to view
   (eldoc-box-help-at-point) )
-(global-set-key (kbd "C-h D") #'my-eldoc-show)
+(global-set-key (kbd "C-h ,") #'my-eldoc-show)
 
 (provide 'my-config)
