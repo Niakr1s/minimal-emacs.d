@@ -124,4 +124,8 @@
 ;; Bind ibuffer
 (global-set-key (kbd "C-x C-b") #'ibuffer)
 
+;;
+(global-set-key (kbd "C-x p S") #'project-remember-project)
+(global-set-key (kbd "C-x p D") #'project-forget-project)
+
 (provide 'my-config)
