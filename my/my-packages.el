@@ -462,6 +462,8 @@
 ;; Set up the Language Server Protocol (LSP) servers using Eglot.
 (use-package eglot
   :ensure nil
+  :init
+  (setq eglot-autoshutdown t)
   :commands (eglot-ensure
              eglot-rename
              eglot-format-buffer))
