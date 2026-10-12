@@ -603,10 +603,6 @@
              eglot-rename
              eglot-format-buffer))
 
-(use-package eldoc-box
-  :ensure t
-  :hook (eglot-managed-mode . eldoc-box-hover-mode))
-
 (use-package buffer-terminator
   :init
   ;; Enable/Disable verbose mode to log buffer cleanup events
