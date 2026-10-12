@@ -697,4 +697,8 @@
 (use-package gptel-agent
   :config (gptel-agent-update))         ;Read files from agents directories
 
+(use-package surround
+  :ensure t
+  :bind-keymap ("M-'" . surround-keymap))
+
 (provide 'my-packages)
