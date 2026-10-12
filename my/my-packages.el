@@ -341,6 +341,7 @@
   ;; :hook ((prog-mode . apheleia-mode))
   )
 
+;; Context-aware 'go to definition' functionality for 50+ programming languages
 (use-package dumb-jump
   :commands dumb-jump-xref-activate
   :init
