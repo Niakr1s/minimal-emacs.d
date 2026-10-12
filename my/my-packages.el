@@ -16,11 +16,6 @@
   (setq which-key-max-description-length 40)
   (which-key-mode 1))
 
-(use-package persist-text-scale
-  :init
-  (setq text-scale-mode-step 1.07)
-  (persist-text-scale-mode 1))
-
 ;; Auto-revert in Emacs is a feature that automatically updates the
 ;; contents of a buffer to reflect changes made to the underlying file
 ;; on disk.
@@ -656,4 +651,8 @@
 
   ;; Optionally, the session name can be shown in the modeline info area:
   (setq easysession-mode-line-misc-info t))
+
+(use-package mood-line
+  :config (mood-line-mode))
+
 (provide 'my-packages)
