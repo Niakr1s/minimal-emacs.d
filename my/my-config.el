@@ -114,16 +114,6 @@
 ;; risky configurations are silently ignored.
 (setq enable-local-variables :safe)
 
-;; Enable `auto-save-mode' to prevent data loss. Use `recover-file' or
-;; `recover-session' to restore unsaved changes.
-(setq auto-save-default t)
-
-;; Trigger an auto-save after 300 keystrokes
-(setq auto-save-interval 300)
-
-;; Trigger an auto-save 30 seconds of idle time.
-(setq auto-save-timeout 30)
-
 ;; Can switch between windows by Shift+arrow
 ;; (windmove-default-keybindings)
 
