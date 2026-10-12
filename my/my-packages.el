@@ -338,6 +338,8 @@
   :commands (
              ;; apheleia-mode
              apheleia-global-mode)
+  :bind
+  (("C-c f" . apheleia-format-buffer))
   ;; :hook ((prog-mode . apheleia-mode))
   )
 
