@@ -6,3 +6,5 @@
 
 (setq site-run-file nil)
 (setq inhibit-default-init t)
+
+(defvar evil-mode-buffers '())

@@ -40,3 +40,4 @@
 (require 'my-config)
 (require 'my-modes)
 (require 'my-dired)
+(require 'my-evil)

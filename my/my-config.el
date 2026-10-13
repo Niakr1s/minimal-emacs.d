@@ -676,13 +676,6 @@
   :config
   (define-key paredit-mode-map (kbd "RET") nil))
 
-;; For paredit+Evil mode users: enhances paredit with Evil mode compatibility
-;; --------------------------------------------------------------------------
-;; (use-package enhanced-evil-paredit
-;;   :commands enhanced-evil-paredit-mode
-;;   :hook
-;;   (paredit-mode . enhanced-evil-paredit-mode))
-
 ;; Displays visible indicators for page breaks
 (use-package page-break-lines
   :commands (page-break-lines-mode
