@@ -876,4 +876,6 @@
     (member (expand-file-name file)
             (mapcar #'expand-file-name (org-agenda-files)))))
 (add-to-list 'recentf-exclude #'my/recentf-exclude-agenda-files)
+
+;; Should be at the end
 (provide 'my-config)
