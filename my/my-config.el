@@ -854,4 +854,26 @@
   (eldoc-box-help-at-point) )
 (global-set-key (kbd "C-h ,") #'my-eldoc-show)
 
+;; org-agenda at startup
+(setq initial-buffer-choice
+      (lambda ()
+        (org-agenda nil "n")
+        (delete-other-windows)
+        (get-buffer "*Org Agenda*")
+        (org-release-buffers org-agenda-new-buffers)
+        (setq org-agenda-new-buffers nil)
+        )
+      )
+
+;; 'q' will act as 'x'
+(with-eval-after-load 'org-agenda
+  (define-key org-agenda-mode-map (kbd "q") #'org-agenda-exit))
+
+;; Not show org-agenda files in recents
+(defun my/recentf-exclude-agenda-files (file)
+  "Return non-nil if FILE is in org-agenda-files."
+  (when (bound-and-true-p org-agenda-files)
+    (member (expand-file-name file)
+            (mapcar #'expand-file-name (org-agenda-files)))))
+(add-to-list 'recentf-exclude #'my/recentf-exclude-agenda-files)
 (provide 'my-config)
