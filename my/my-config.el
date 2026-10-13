@@ -857,11 +857,16 @@
 ;; org-agenda at startup
 (setq initial-buffer-choice
       (lambda ()
+        ;; Show agenda in the single window
         (org-agenda nil "n")
         (delete-other-windows)
-        (get-buffer "*Org Agenda*")
+
+        ;; removing buffers, opened by org-agenda
         (org-release-buffers org-agenda-new-buffers)
         (setq org-agenda-new-buffers nil)
+
+        ;; Return the buffer name
+        (get-buffer "*Org Agenda*")
         )
       )
 
