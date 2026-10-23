@@ -856,5 +856,8 @@
             (mapcar #'expand-file-name (org-agenda-files)))))
 (add-to-list 'recentf-exclude #'my/recentf-exclude-agenda-files)
 
+(use-package eca
+  :vc (:url "https://github.com/editor-code-assistant/eca-emacs" :rev :newest))
+
 ;; Should be at the end
 (provide 'my-config)
