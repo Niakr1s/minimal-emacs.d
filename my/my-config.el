@@ -449,26 +449,6 @@
   (:map markdown-mode-map
         ("C-c C-e" . markdown-do)))
 
-(use-package kirigami
-  :commands (kirigami-open-fold
-             kirigami-open-fold-rec
-             kirigami-close-fold
-             kirigami-toggle-fold
-             kirigami-open-folds
-             kirigami-close-folds-except-current
-             kirigami-close-folds)
-
-  :bind
-  (("C-c z o" . kirigami-open-fold)      ; Open fold at point
-   ("C-c z O" . kirigami-open-fold-rec)  ; Open fold recursively
-   ("C-c z r" . kirigami-open-folds)     ; Open all folds
-   ("C-c z c" . kirigami-close-fold)     ; Close fold at point
-   ("C-c z m" . kirigami-close-folds)    ; Close all folds
-   ("C-c z a" . kirigami-toggle-fold))   ; Toggle fold at point
-
-  :init
-  (kirigami-global-mode 1))
-
 ;; Apheleia is an Emacs package designed to run code formatters (e.g., Shfmt,
 ;; Black and Prettier) asynchronously without disrupting the cursor position.
 (use-package apheleia
