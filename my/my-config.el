@@ -859,5 +859,7 @@
 (use-package eca
   :vc (:url "https://github.com/editor-code-assistant/eca-emacs" :rev :newest))
 
+(use-package magit)
+
 ;; Should be at the end
 (provide 'my-config)
