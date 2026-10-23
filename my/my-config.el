@@ -9,7 +9,7 @@
 
 ;; Font
 (set-face-attribute 'default nil
-                    :height 120 :weight 'normal :family "Iosevka NFM")
+                    :height 120 :weight 'normal :family "Iosevka NF")
 
 ;; --- Input method ---
 (setq default-input-method "russian-computer")
